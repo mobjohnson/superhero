@@ -1,0 +1,18 @@
+<h1>Here is your Superhero!!!</h1>
+
+	<div>
+		<h3><%= @superhero.name %></h3>
+		<p>Has <%= @superhero.super_power %> superpower and
+		<% if @superhero.cape %>
+		has a cape
+		<% else %>
+		does not have a cape
+		<% end %>
+
+		</p>
+		<%= image_tag(@superhero.image) %>
+		<%= link_to 'edit', edit_superhero_path(@superhero) %>
+		<%= link_to 'delete', @superhero, method: :delete  %>
+	
+
+	</div>
